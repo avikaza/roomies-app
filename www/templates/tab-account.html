@@ -1,0 +1,25 @@
+<ion-view title="Account">
+  <ion-content>
+    <div class="list" ng-show="showLoginForm">
+      <label class="item item-input">
+        <span class="input-label">Email</span>
+        <input type="text" ng-model="em"/>
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Password</span>
+        <input type="password" ng-model="pwd"/>
+      </label>
+      <button class="button button-block button-positive" ng-click="login(em, pwd)">
+        Login
+      </button>
+    </div>
+    <div class="card" ng-hide="showLoginForm">
+      <div class="item item-text-wrap">
+        You are logged in as {{user.password.email}}
+      </div>
+    </div>
+    <button class="button button-stable" ng-click="logout()" ng-hide="showLoginForm">
+      Logout
+    </button>
+  </ion-content>
+</ion-view>

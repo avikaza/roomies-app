@@ -1,0 +1,20 @@
+<ion-view title="My Expenses">
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="expense in expenses|filter:user.password.email" type="item-text-wrap">
+        {{expense.label}}
+        <span class="badge badge-balanced">{{expense.cost}}</span>
+      </ion-item>
+    </ion-list>
+      <div class="card assertive">
+          <div class="item item-text-wrap">
+              Total Spent <span class="badge badge-positive">{{getTotal()}}</span>
+          </div>
+      </div>
+  </ion-content>
+  <ion-footer-bar>
+      <input ng-model='label' type='text' id='labelInput'  placeholder='Type a new expense...'>
+      <input ng-model='cost' type="number" id="costInput" placeholder='$'>
+      <button class="button icon-left ion-plus" ng-click="addExpense($event)">Add</button>
+  </ion-footer-bar>
+</ion-view>
