@@ -1,7 +1,7 @@
 <ion-view title="Room Mate's Expenses">
   <ion-content>
     <ion-list>
-      <ion-item ng-repeat="expense in expenses|filter:roomiesEmail" type="item-text-wrap">
+      <ion-item ng-repeat="expense in expenses|filter:by.roomiesEmail" type="item-text-wrap">
         {{expense.label}}
         <span class="badge badge-energized">{{expense.cost}}</span>
       </ion-item>

@@ -10,10 +10,6 @@ angular.module('starter.services', [])
     ref: function () {
       return ref;
     },
-    /**
-     *
-     * @returns {Firebase}
-     */
     refExpenses: function () {
       return refExpenses;
     },
